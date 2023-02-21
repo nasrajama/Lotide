@@ -1,9 +1,11 @@
+const assertEqual = require('chai').assert;
+const tail   = require('../tail');
 
-const assertEqual = require('../assertEqual');
-const tail = require('../tail');
-
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); 
-assertEqual(words.length, 3);
-
-module.exports = tail;
+describe("#tail", () => {
+  it("returns [2, 3] for [1, 2, 3]", () => {
+    assertEqual.deepEqual(tail([1, 2, 3]), [2, 3]);
+  });
+  it("returns [4, 5] for [3, 4, 5]", () => {
+    assertEqual.deepEqual(tail([3, 4, 5]), [4, 5]); 
+  });
+});
