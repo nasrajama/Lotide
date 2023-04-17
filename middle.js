@@ -1,6 +1,6 @@
 const middle = function(array) {
-  let result = [];
-  let middleIndex = Math.floor(array.length / 2);
+  const result = [];
+  const middleIndex = Math.floor(array.length / 2);
   
   if (array.length <= 2) {
     return result;
